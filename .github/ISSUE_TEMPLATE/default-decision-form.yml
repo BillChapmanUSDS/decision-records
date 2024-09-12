@@ -1,0 +1,50 @@
+name: Default Decision Record
+description: A record of a decision
+title: "[Short Title]: Decision Record "
+labels: ["decision", "new"]
+projects: ["decision-records"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: description
+    attributes:
+      label: Brief Description
+      description: Provide a description of the decision. It should not exceed two or three large sentences. It should be written in a way that is actionable, providing a clear statement of what OCTO has decided to (or not to) do
+      placeholder: 
+    validations:
+      required: true
+  - type: textarea
+    id: consequences
+    attributes:
+      label: Consequences
+      description: Provide a description of the consequence. It should not exceed two or three large sentences. It should be written in a way that is actionable, providing a clear statement of what OCTO has decided to (or not to) do
+      placeholder: Tell us what you see!
+      value: 
+    validations:
+      required: true
+  - type: dropdown
+    id: document-type
+    attributes:
+      label: Document Type
+      description: What portfolio or community does this decision support
+      options:
+        - OCTO Leadership
+        - OCTO Product Strategy 
+        - OCTO Design Practice 
+        - OCTO Engineering Practice 
+        - OCTO Operations 
+        - OCTO Hiring 
+        - OCTO Data and AI 
+      default: 0
+    validations:
+      required: true
+  
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks
+      description: The Following Risks have been noted and discussed
+
